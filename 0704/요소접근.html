@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<body>
+  <ul>
+    <li id="hi">
+      안녕하세요.
+    </li>
+  </ul>
+  <button onclick="btn()">알림창뜨기</button>
+
+  <input type="text" id="id">
+  <input type="button" id="button" value="아이디찾기" onclick="click1">
+  
+  
+
+  <script>
+    // 바디안에 피태그추가
+    // document.getElementsByTagName('body');
+    // document.createElement('p');
+
+    var tagName = document.getElementsByTagName('li');
+    console.log(tagName);
+
+    var idName = document.getElementById('hi');
+    idName.style.color = "red";
+    // console.log(idName);
+
+    idName.innerHTML = "Hi";
+
+    function btn() {
+      alert('버튼이 클릭되었습니다');
+    }
+
+    function click1(){
+      var getId = document.getElementById("id");
+      console.log(getId);
+    }
+
+  </script>
+</body>
+
+</html>

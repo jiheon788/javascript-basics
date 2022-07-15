@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let o = {
+    //   name: 'Daniel',
+    //   f1: () => {
+    //     console.log("[f1]this.name : ", this.name); 
+    //     //화살표함수에서는 디스가 자기자신x, 상위객체 의미함 -> 윈도우
+    //   },
+    //   f2: function () {
+    //     console.log("[f2]this.name : ", this.name);
+    //   },
+    //   f3: () => {
+    //     console.log("[f3]this : ", this); 
+    //     //화살표함수에서는 디스가 자기자신x, 상위객체 의미함 -> 윈도우
+    //   },
+    //   f4: function () {
+    //     console.log("[f4]this : ", this);
+    //   }
+    // }
+
+    // o.f1();
+    // o.f2();
+    // o.f3();
+    // o.f4();
+
+    let ab1 = function(){
+      console.log(this);
+    }
+    ab1();
+
+    let result = ab1.bind(1);
+    result();
+
+    let ab2 = ()=>{
+      console.log(this);
+    }
+
+    ab2();
+
+    function abc(){
+      console.log(this);
+    }
+    abc();
+
+    let o= {
+      o1:function(){
+        console.log(this);
+      },
+      o2: ()=>{
+        console.log(this);
+        let o3 = () => {
+          console.log(this);
+        }
+        o3();
+      },
+      o3:function(){
+        console.log(this);
+        let o4 = ()=>{
+          console.log(this);
+
+        }
+        o4
+      }
+      
+    }
+  </script>
+</body>
+
+</html>

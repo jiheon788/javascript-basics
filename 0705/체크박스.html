@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>식사</h1>
+  <ul>
+    <li>치킨<input type="checkbox" name="food" value="치킨"></li>
+    <li>피자<input type="checkbox" name="food" value="피자"></li>
+    <li>족발<input type="checkbox" name="food" value="족발"></li>
+  </ul>
+
+  <button onclick="printResult(event)">결과보기</button>
+  <h3>결과값:</h3>
+  <p id="result"></p>
+
+  <script>
+    function printResult() {
+      // 선택된 목록 가져오기
+      const query = 'input[name="food"]:checked';
+      const selectedEls =
+        document.querySelectorAll(query);
+
+      // 선택된 목록에서 value 찾기
+      let result = '';
+      selectedEls.forEach((el) => {
+        result += el.value + ' ';
+      });
+
+      console.log(selectedEls);
+      // 출력
+      document.getElementById('result').innerText = result;
+    }
+
+    // function printResult2(){
+    //   var arr = document.getElementsByName("food");
+    //   var str = ""
+    //   for(let i = 0; i < arr.length; i++){
+    //     var c = arr[i];
+    //     if(c.checked){
+    //       str += c.value + "<br/>";
+    //     }
+    //   }
+    //   document.getElementById('result').innerText = str;
+    // }
+  </script>
+
+</body>
+
+</html>

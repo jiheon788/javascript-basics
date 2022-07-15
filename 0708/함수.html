@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 함수선언문
+    function sayHello() {
+      console.log("hi");
+    }
+
+    // 함수표현식
+    let sayHello = function () {
+      console.log('Hello');
+    }
+
+    let add = function (n1, n2) {
+      return n1 + n2;
+    }
+    // 화살표 함수
+    let add2 = (n1, n2) => {
+      return n1 + n2;
+    }
+
+    // 리턴문은 소괄호로 대체 가능 - 한줄!
+    let add3 = (n1, n2) => (n1 + n2);
+    // 리턴문이 한줄이면 괄호도 생략가능
+    let add4 = (n1, n2) => n1 + n2;
+
+    //인수가 하나면은 괄호 생략가능
+    let sayHello = name => `Hello,${name}`;
+
+    //인수가 없으면 괄호생략 불가능
+    let showError()=>{alert('error!')}
+  </script>
+</body>
+
+</html>

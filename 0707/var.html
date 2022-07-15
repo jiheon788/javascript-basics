@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function varFor() {
+    //   for (var i = 0; i < 3; ++i) {
+    //     setTimeout(() => console.log("var i: ", i), 0);
+    //   }
+    // }
+
+    // function letFor() {
+    //   for (let i = 0; i < 3; ++i) {
+    //     setTimeout(() => console.log("let i: ", i), 0);
+    //   }
+    // }
+
+    // varFor();
+    // letFor();
+
+    const users = [{
+        name: 'YD',
+        age: 22
+      },
+      {
+        name: 'Bill',
+        age: 32
+      },
+      {
+        name: 'Andy',
+        age: 21
+      },
+      {
+        name: 'Roky',
+        age: 35
+      },
+    ];
+
+    const newUsers = users.map(user => {
+      if (user.name === 'YD') {
+        return {
+          ...user,
+          age: 18
+        };
+      }
+
+      return {
+        ...user
+      };
+    });
+
+    console.log(newUsers);
+    
+  </script>
+</body>
+
+</html>

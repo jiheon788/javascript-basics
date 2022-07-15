@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 계산기 -->
+  <input type="text" />
+  +
+  <input type="text" />
+  <button onclick="showSum()">
+  =
+  </button>
+  <input type="text" />
+
+  <script>
+    
+
+  
+    function showSum() {
+      var num1 = document.getElementsByTagName("input")[0].value;
+      var num2 = document.getElementsByTagName("input")[1].value;
+
+      var result = parseInt(num1) + parseInt(num2);
+
+      document.getElementsByTagName("input")[2].value = result;
+    }
+  </script>
+
+  <!-- onchange -->
+  <br><br>
+  함수형
+  <input type="text" id="textBox" onchange="changeMessage()">
+  <p id="view"></p>
+
+  이벤트리스너
+  <input type="text" id="textBox2">
+  <p id="view2"></p>
+
+  <script>
+    function changeMessage(){
+      var message = document.getElementById('textBox').value;
+      document.getElementById("view").innerHTML = message;
+    }
+
+    document.getElementById('textBox2').addEventListener('change', function(){
+      document.getElementById("view2").innerHTML = this.value;
+    });
+
+  </script>
+
+  
+
+</body>
+
+</html>

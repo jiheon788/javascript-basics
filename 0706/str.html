@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    message = "abcde";
+    rotation = 10;
+
+
+    // let arr = message.split("");
+    // console.log("arr = ", arr);
+    // console.log(message.codePointAt(0));
+
+    for (let i = 0; i < message.length; i++) {
+      // console.log(arr.codePointAt(i));
+      console.log(message.codePointAt(i) + rotation)
+      // console.log(String.fromCharCode(107))
+      console.log(String.fromCharCode(message.codePointAt(i) + rotation));
+
+      // return this.message = arr.join(",");
+    }
+  </script>
+</body>
+
+</html>
