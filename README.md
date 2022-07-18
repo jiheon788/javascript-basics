@@ -288,3 +288,43 @@ function promiseFunc(){
 
 ### SSR
 * Server Side Rendering
+
+## Mongo DB
+* NoSQL
+* RDB
+  - 오라클, MySQL ...
+* DB > Collection > Document > objectID (like SQL-PK)
+* Collection이 다큐멘트의 구조를 결정x
+
+* MySQL
+```SQL
+CREATE DATABASE simple_board
+
+CREATE TABLE posts (
+  id NOT NULL AUTO INCREAMENT
+  title VARCHAR(30),
+  content TEXT,
+  PRIMARY KEY(id)
+);
+
+INSERT INTO posts (title, content)
+VALUES
+('first title', 'first content'),
+('second title', 'second content'), 
+```
+* MongoDB
+```SQL
+use simple_board
+db.posts.insert([
+  {
+  title: 'first title',
+  content: 'first content'
+  },
+  {
+  title: 'second title',
+  content: 'second content'
+  }
+]);
+
+```
+* MongoDB Compass (like MySQL - Workbench)
